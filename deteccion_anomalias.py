@@ -22,7 +22,7 @@ if file is None:
 df = pd.read_csv(file)
 
 # Cantidad de registros a analizar
-rows = st.slider("Cantidad de registros a analizar:", min_value=5000, max_value=20000, step=500)
+rows = st.slider("Cantidad de registros a analizar:", min_value=5000, max_value=50000, step=500)
 
 # Limitar a los primeros 'rows' registros
 df = df.head(rows)
@@ -324,4 +324,5 @@ st.markdown("""
 - **Falso Negativo:** Alto costo como pérdidas financieras, pérdida de reputación.
 - **Falso Positivo:** Transacción legítima marcada como fraude puede generar investigaciones fiscales, potencial pérdida de confianza.
 """)
+
 
