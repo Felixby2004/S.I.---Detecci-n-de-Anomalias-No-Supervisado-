@@ -32,6 +32,10 @@ df = df.iloc[:rows].copy()
 cat_cols = ["type"]
 num_cols = ["step","amount","oldbalanceOrg","newbalanceOrig","oldbalanceDest","newbalanceDest"]
 
+# Vista
+st.subheader("👀 Vista previa")
+st.dataframe(df.head())
+
 # Resumen
 st.subheader("📋 Resumen del Dataset subido")
 st.markdown('<p>Distribución de "isFraud" (Normal = 0, Fraude = 1):</p>', unsafe_allow_html=True)
@@ -272,3 +276,4 @@ st.markdown("""
 - **Falso Negativo:** Alto costo como pérdidas financieras, pérdida de reputación.
 - **Falso Positivo:** Transacción legítima marcada como fraude puede generar investigaciones fiscales, potencial pérdida de confianza.
 """)
+
